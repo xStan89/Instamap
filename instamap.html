@@ -2682,6 +2682,12 @@
       return;
     }
     
+    // If legend is disabled via Formatting.csv, hide it
+    if (!legendEnabled) {
+      legendContainer.style.display = 'none';
+      return;
+    }
+    
     // If no categories, hide legend
     if (uniqueCategories.length === 0) {
       console.warn('No categories found - legend will not display');
